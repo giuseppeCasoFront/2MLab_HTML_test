@@ -1,0 +1,30 @@
+.start {
+  $start: &;
+  @include text--regular;
+
+  &::after {
+    background-image: url('https://picsum.photos/id/1050/1024/768')
+  }
+
+  &::before {
+    content: '';
+    border: solid $c-white;
+    border-width: 0 px2rem(3) px2rem(3) 0;
+    display: inline-block;
+
+    position: absolute;
+    bottom: px2rem(40);
+    left: 50%;
+    padding: px2rem(4);
+
+    transform: rotate(45deg) translateX(-50%)
+  }
+
+  &__title {
+    @include xxbig-size;
+
+    color: $c-white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px $c-dark-rey;
+  }
+}

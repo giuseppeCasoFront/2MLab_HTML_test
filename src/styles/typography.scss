@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+
+@mixin text--regular {
+  font-family: $Lato, sans-serif;
+  font-weight: $regular;
+}
+
+@mixin xsmall-size {
+  font-size: px2rem(12);
+  line-height: normal;
+}
+
+@mixin small-size {
+  font-size: px2rem(16);
+  line-height: normal;
+}
+
+@mixin medium-size {
+  font-size: px2rem(18);
+  line-height: normal;
+
+}
+
+@mixin big-size {
+  font-size: px2rem(22);
+  line-height: normal;
+
+  @include breakpoint(xs) {
+    font-size: px2rem(18);
+  }
+}
+
+@mixin xbig-size {
+  font-size: px2rem(26);
+  line-height: normal;
+
+  @include breakpoint(xs) {
+    font-size: px2rem(20);
+  }
+}
+
+@mixin xxbig-size {
+  font-size: px2rem(36);
+  line-height: normal;
+
+  @include breakpoint(xs) {
+    font-size: px2rem(28);
+  }
+}

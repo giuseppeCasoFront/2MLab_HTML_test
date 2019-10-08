@@ -1,0 +1,22 @@
+{
+  "name": "2mlab",
+  "version": "1.0.0",
+  "description": "2Mlab Hiring exercise - Giuseppe Caso",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "onchange '**/*.scss' -- npm run compile",
+    "compile": "node-sass src/styles/main.scss dist/css/main.css && node-sass dist/templates/main.scss dist/css/templates.css"
+  },
+  "author": "Giuseppe Caso",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.3"
+  },
+  "dependencies": {
+    "multi-sass": "^1.0.0",
+    "onchange": "^6.1.0"
+  }
+}

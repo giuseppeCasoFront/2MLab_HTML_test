@@ -1,0 +1,50 @@
+// - Breakpoints
+$bp-mobile: 680;
+$bp-tablet: 768;
+$bp-sm-desktop: 992;
+$bp-med-desktop: 1024;
+$bp-desktop: 1200;
+
+$breakpoints: (
+  'xs': 0,
+  'sm': 768,
+  'md': 990,
+  'lg': 1200,
+  'mlg': 1024,
+  'xl': 1440,
+  'xxl': 1680
+);
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: $bp-tablet - 1px) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media (min-width: $bp-tablet + 0px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: $bp-sm-desktop + 0px) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: $bp-desktop + 0px) {
+      @content;
+    }
+  } @else if $class == mlg {
+    @media (min-width: $bp-med-desktop + 0px) {
+      @content;
+    }
+  } @else if $class == xl {
+    @media (min-width: $bp-xl-desktop + 0px) {
+      @content;
+    }
+  } @else if $class == xxl {
+    @media (min-width: $bp-xxl-desktop + 0px) {
+      @content;
+    }
+  } @else {
+    @warn 'Breakpoint mixin supports: xs, sm, md, lg, mlg, xl, xxl';
+  }
+}

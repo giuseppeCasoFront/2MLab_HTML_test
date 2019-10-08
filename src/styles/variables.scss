@@ -1,0 +1,13 @@
+//- custom fonts
+$Lato: 'Bree Serif';
+
+//- custom fonts weight
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+//- custom easing transition
+$a-ease-in: cubic-bezier(.75, -.03, .83, .6);
+$a-ease-out: cubic-bezier(.17, .67, .17, 1.01);
+$a-elastic: cubic-bezier(.14,.85,.44,1.44);
+$a-elastic-out: cubic-bezier(.5,-0.26,.78,.5)
